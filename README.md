@@ -2,6 +2,13 @@
 
 A template/boilerplate Phoenix project for bootstrapping your Alexa skill.
 
+## App Configuration
+
+ * Add your ASK skill app ID to the config.exs, and likely make it an ENV VAR in production
+
+## Alexa Skill Configuration
+
+ * Service Endpoint - https://yourapp.heroku.com/api/alexa/alexa
 
 To start your Phoenix server:
 
