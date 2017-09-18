@@ -6,6 +6,8 @@ defmodule AlexaHelloWorld.Application do
   def start(_type, _args) do
     import Supervisor.Spec
 
+    alexa_app_id = Application.get_env(:alexa_hello_world, AlexaHelloWorld.AlexaSkill)[:app_id]
+
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
@@ -14,6 +16,9 @@ defmodule AlexaHelloWorld.Application do
       supervisor(AlexaHelloWorldWeb.Endpoint, []),
       # Start your own worker by calling: AlexaHelloWorld.Worker.start_link(arg1, arg2, arg3)
       # worker(AlexaHelloWorld.Worker, [arg1, arg2, arg3]),
+
+
+      worker(AlexaHelloWorld.AlexaSkill.Handler, [[app_id: alexa_app_id]])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -40,7 +40,10 @@ defmodule AlexaHelloWorld.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+
+      # Alexa skill support
+      {:alexa, git: "https://github.com/col/alexa.git", ref: "f13b881d8d7b2ba3c47be4811bf2f3803bd7e527"}
     ]
   end
 

@@ -22,6 +22,10 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Set your Alexa App ID, probably want to make it an ENV var in production
+config :alexa_hello_world, AlexaHelloWorld.AlexaSkill,
+  app_id: 'amzn-alexa-app-id-goes-here'
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

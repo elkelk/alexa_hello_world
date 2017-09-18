@@ -19,8 +19,9 @@ defmodule AlexaHelloWorldWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", AlexaHelloWorldWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", AlexaHelloWorldWeb do
+    pipe_through :api
+
+    post "/alexa/:uid", Api.AlexaWebhookController, :incoming
+  end
 end
