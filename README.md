@@ -1,5 +1,8 @@
 # AlexaHelloWorld
 
+A template/boilerplate Phoenix project for bootstrapping your Alexa skill.
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
