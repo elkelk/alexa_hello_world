@@ -3,13 +3,18 @@ defmodule AlexaHelloWorld.AlexaSkill.Handler do
 
   def handle_launch(request, response) do
     response
-    |> say("Welcome")
+    |> say("boo boo boo bop, do you want to hear a beat?")
     |> Alexa.Response.should_end_session(false)
   end
 
-  def handle_intent("SayHello", request, response) do
+  def handle_intent("YesIntent", request, response) do
+    beats = [
+      "boots, cats, boots, cats, soup, soup, soup, soup",
+      "poof, poof, poof, poof, gah gah gah gah gah gah gah gah"
+    ]
     response
-    |> say("Hello World")
+    |> say(Enum.random(beats))
     |> Alexa.Response.should_end_session(true)
   end
+
 end
