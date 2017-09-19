@@ -1,5 +1,5 @@
 defmodule AlexaHelloWorldWeb.Api.AlexaWebhookController do
-  use AlexaHelloWorld.Web, :controller
+  use AlexaHelloWorldWeb, :controller
 
   def incoming(conn, %{"uid" => "alexa"} = params) do
     request = Alexa.Request.from_params(params)
