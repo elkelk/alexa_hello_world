@@ -1,4 +1,4 @@
-defmodule AlexaHellowWorld.AlexaSkill.Handler do
+defmodule AlexaHelloWorld.AlexaSkill.Handler do
   use Alexa.Skill
 
   def handle_launch(request, response) do

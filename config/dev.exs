@@ -56,3 +56,8 @@ config :alexa_hello_world, AlexaHelloWorld.Repo,
   database: "alexa_hello_world_dev",
   hostname: "localhost",
   pool_size: 10
+
+# Configure your alexa skill app id
+config :alexa_hello_world, AlexaHelloWorld.AlexaSkill,
+  app_id: "your-app-id-here"
+
